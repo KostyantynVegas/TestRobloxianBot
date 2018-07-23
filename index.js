@@ -4,22 +4,18 @@ const bot = new Discord.Client();
 
 console.log("BotWorks");//наличие багов.
 
-//bot register.
-bot.login("NDcwMjU2MTc5NzgwNjQ4OTcx.DjYCwg.S-zss2_7QtOhxkWeXiitpnHynJc");
-bot.login(process.env.BOT_KEYFORROBLOX);
-
 //start code.
 //help commands.
 bot.on('message', message => {
-     if (message.content ==="#help") {
-         message.reply("Commands:!credits, !message, !puzzle, !my avatar, !meme.");
-     }
+    if (message.content ==="#help") {
+        message.reply("Commands:!credits, !message, !puzzle, !my avatar, !meme.");
+    }
 });
 //credits command.
 bot.on('message', message => {
-    if (message.content ==="!credits") {
-        message.reply("Programmed on J.S. by Roenko Kostyantyn.");
-    }
+   if (message.content ==="!credits") {
+       message.reply("Programmed on J.S. by Roenko Kostyantyn.");
+   }
 });
 //random message.
 //variables.
@@ -33,24 +29,24 @@ var joke6 = "Го играть?";
 var joke7 = "Удачного дня!";
 var numbers = 7;
 var randomizer = Math.floor(Math.random() * (numbers -1 +1)) +1;
-    if (message.content ==="!message") {
-    switch (randomizer) {
-     case 1: message.reply([joke1]); break;
-     case 2: message.reply([joke2]); break;
-     case 3: message.reply([joke3]); break;
-     case 4: message.reply([joke4]); break;
-     case 5: message.reply([joke5]); break;
-     case 6: message.reply([joke6]); break;
-     case 7: message.reply([joke7]); break;
-    }   
+   if (message.content ==="!message") {
+   switch (randomizer) {
+    case 1: message.reply([joke1]); break;
+    case 2: message.reply([joke2]); break;
+    case 3: message.reply([joke3]); break;
+    case 4: message.reply([joke4]); break;
+    case 5: message.reply([joke5]); break;
+    case 6: message.reply([joke6]); break;
+    case 7: message.reply([joke7]); break;
+   }   
 }
 });
 //Author image avatar.
 bot.on("message", message => {
-    var avatar = message.author.avatarURL;
-   if (message.content ==="!my avatar") {
-       message.reply("Your avatar is, " + avatar);
-   }
+   var avatar = message.author.avatarURL;
+  if (message.content ==="!my avatar") {
+      message.reply("Your avatar is, " + avatar);
+  }
 });
 //Random meme image.
 bot.on("message", message => {
@@ -68,76 +64,78 @@ var img10="http://www.dictionary.com/e/wp-content/uploads/2018/03/dank-meme.jpg"
 var img11="https://i.pinimg.com/originals/85/42/d7/8542d70d068a416047f37f46822ffcb8.jpg";
 var img12="http://cdn.ebaumsworld.com/thumbs/2017/11/05/044731/85508229/memes2.jpg";
 var img13="https://2static4.fjcdn.com/thumbnails/comments/Well+congratulations+you+have+introduced+the+latest+jojo+meme+since+_6aa0bf2d1a5d70204eab70659aedec65.jpg";
-     if(message.content === "!meme") {
+    if(message.content === "!meme") {
 var number = 13;
 var random = Math.floor(Math.random() * (number - 1 +1)) +1;
-     switch (random) {
-     case 1:message.reply ([img1]); break;
-     case 2:message.reply ([img2]); break;
-     case 3:message.reply ([img3]); break;
-     case 4:message.reply ([img4]); break;
-     case 5:message.reply ([img5]); break;
-     case 6:message.reply ([img6]); break;
-     case 7:message.reply ([img7]); break;
-     case 8:message.reply ([img8]); break;
-     case 9:message.reply ([img9]); break;
-     case 10:message.reply ([img10]); break;
-     case 11:message.reply ([img11]); break;
-     case 12:message.reply ([img12]); break;
-     case 13:message.reply ([img13]); break;
-     }
- }
+    switch (random) {
+    case 1:message.reply ([img1]); break;
+    case 2:message.reply ([img2]); break;
+    case 3:message.reply ([img3]); break;
+    case 4:message.reply ([img4]); break;
+    case 5:message.reply ([img5]); break;
+    case 6:message.reply ([img6]); break;
+    case 7:message.reply ([img7]); break;
+    case 8:message.reply ([img8]); break;
+    case 9:message.reply ([img9]); break;
+    case 10:message.reply ([img10]); break;
+    case 11:message.reply ([img11]); break;
+    case 12:message.reply ([img12]); break;
+    case 13:message.reply ([img13]); break;
+    }
+}
 });
 //random puzzle.
 //variables.
+bot.login("NDcwMjU2MTc5NzgwNjQ4OTcx.DjYCwg.S-zss2_7QtOhxkWeXiitpnHynJc");
+bot.login(process.env.BOT_KEYFORROBLOX);
 bot.on('message', message => {
-    var p1 = "Без ног и без крыльев оно,Быстро летит, не догонишь его. Ответ писать через '!' ";
-    var p2 = "Тебе дано,А люди им пользуются. Ответ писать через '!' ";
-    var p3 = "Одной ручкой всех встречает,Другой ручкой провожает. Ответ писать через '!' ";
-    var p4 = "Себя он раскрывает, тебя он закрывает,Только дождичек пройдет — сделает наоборот. Ответ писать через '!' ";
-    var p5 = "Синие покрывало-весь мир покрыла. Ответ писать через '!' ";
-    var numbers = 5;
-    var randomizer = Math.floor(Math.random() * (numbers -1 +1)) +1;
-        if (message.content ==="!puzzle") {
-        switch (randomizer) {
-         case 1: message.reply([p1]); break;
-         case 2: message.reply([p2]); break;
-         case 3: message.reply([p3]); break;
-         case 4: message.reply([p4]); break;
-         case 5: message.reply([p5]); break;
-        }   
-    }
-    });
+   var p1 = "Без ног и без крыльев оно,Быстро летит, не догонишь его. Ответ писать через '!' ";
+   var p2 = "Тебе дано,А люди им пользуются. Ответ писать через '!' ";
+   var p3 = "Одной ручкой всех встречает,Другой ручкой провожает. Ответ писать через '!' ";
+   var p4 = "Себя он раскрывает, тебя он закрывает,Только дождичек пройдет — сделает наоборот. Ответ писать через '!' ";
+   var p5 = "Синие покрывало-весь мир покрыла. Ответ писать через '!' ";
+   var numbers = 5;
+   var randomizer = Math.floor(Math.random() * (numbers -1 +1)) +1;
+       if (message.content ==="!puzzle") {
+       switch (randomizer) {
+        case 1: message.reply([p1]); break;
+        case 2: message.reply([p2]); break;
+        case 3: message.reply([p3]); break;
+        case 4: message.reply([p4]); break;
+        case 5: message.reply([p5]); break;
+       }   
+   }
+   });
 
 //Ответы на загадки. время,имя,дверь,зонт,небо.
 //time.
 bot.on('message', message => {
-    if (message.content ==="!время") {
-        message.reply("Great!Без ног и без крыльев оно,Быстро летит, не догонишь его. Ответ: время.");
-    }
+   if (message.content ==="!время") {
+       message.reply("Great!Без ног и без крыльев оно,Быстро летит, не догонишь его. Ответ: время.");
+   }
 });
 //name.
 bot.on('message', message => {
 if (message.content ==="!имя") {
-    message.reply("Good job. Тебе дано,А люди им пользуются. Ответ: имя.");
+   message.reply("Good job. Тебе дано,А люди им пользуются. Ответ: имя.");
 }
 });
 //door.
 bot.on('message', message => {
 if (message.content ==="!дверь") {
-    message.reply("Normal. Одной ручкой всех встречает,Другой ручкой провожает. Ответ: дверь.");
+   message.reply("Normal. Одной ручкой всех встречает,Другой ручкой провожает. Ответ: дверь.");
 }
 });
 //parasoll.
 bot.on('message', message => {
 if (message.content ==="!зонт") {
-    message.reply("Easy. Себя он раскрывает, тебя он закрывает,Только дождичек пройдет — сделает наоборот. Ответ: зонт.");
+   message.reply("Easy. Себя он раскрывает, тебя он закрывает,Только дождичек пройдет — сделает наоборот. Ответ: зонт.");
 }
 });
 //sky.
 bot.on('message', message => {
 if (message.content ==="!небо") {
-    message.reply("Noob. Синие покрывало-весь мир покрыла. Ответ: небо.");
+   message.reply("Noob. Синие покрывало-весь мир покрыла. Ответ: небо.");
 }
 });
 
