@@ -93,12 +93,11 @@ bot.on('message', message => {
    var p3 = "Одной ручкой всех встречает,Другой ручкой провожает. Ответ писать через '!' "; Answers = "!дверь";
    var p4 = "Себя он раскрывает, тебя он закрывает,Только дождичек пройдет — сделает наоборот. Ответ писать через '!' "; Answers = "!зонт";
    var p5 = "Синие покрывало-весь мир покрыла. Ответ писать через '!' "; Answers = "!небо";
-   var Answers = "";
    var numbers = 5;
 
 //answered.
        if (answered == false) {
-       AuthorMessage = msg;
+       AuthorMessage = message;
        if (AuthorMessage == Answers) {
        message.reply('Ты выиграл! :grinning:');
        }
@@ -125,9 +124,9 @@ bot.on('ready', () => {
     console.log('BotWorks!');
     bot.user.setGame("#help");
 //puzzle game vars.
-    answered = true;
-    Answers = "";
-    AuthorMessage = "";
+  var answered = true;
+  var Answers = "";
+  var AuthorMessage = "";
 });
 
 //Ответы на загадки. время,имя,дверь,зонт,небо.
