@@ -94,7 +94,7 @@ bot.on('message', message => {
    var numbers = 5;
 //answered.
        if (answered == false) {
-       AuthorMessage = message.author();
+       AuthorMessage = message.author;
        if (AuthorMessage == Answers) {
        message.reply('Ты выиграл! :grinning:');
        }
