@@ -2,6 +2,11 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
 
+bot.on('ready', ()=> {
+    console.log("botworks!");
+    bot.user.setGame("#help");
+});
+
 //start code.
 //help commands.
 bot.on('message', message => {
@@ -85,8 +90,6 @@ var random = Math.floor(Math.random() * (number - 1 +1)) +1;
 
 //random puzzle.
 //variables.
-bot.login("NDcwMjU2MTc5NzgwNjQ4OTcx.DjYCwg.S-zss2_7QtOhxkWeXiitpnHynJc");
-bot.login(process.env.BOT_KEYFORROBLOX);
 bot.on('message', message => {
    var p1 = "Без ног и без крыльев оно,Быстро летит, не догонишь его. Ответ писать через '!' "; Answers = "!время";
    var p2 = "Тебе дано,А люди им пользуются. Ответ писать через '!' "; Answers ="!имя";
@@ -94,6 +97,9 @@ bot.on('message', message => {
    var p4 = "Себя он раскрывает, тебя он закрывает,Только дождичек пройдет — сделает наоборот. Ответ писать через '!' "; Answers = "!зонт";
    var p5 = "Синие покрывало-весь мир покрыла. Ответ писать через '!' "; Answers = "!небо";
    var numbers = 5;
+   var AuthorMessage = "";
+   var answered = true;
+   var Answers = "";
 
 //answered.
        if (answered == false) {
@@ -119,15 +125,7 @@ bot.on('message', message => {
     answered = false;
    }
    });
-
-bot.on('ready', () => {
-    console.log('BotWorks!');
-    bot.user.setGame("#help");
-//puzzle game vars.
-  var answered = true;
-  var Answers = "";
-  var AuthorMessage = "";
-});
-
+bot.login("NDcwMjU2MTc5NzgwNjQ4OTcx.DjYCwg.S-zss2_7QtOhxkWeXiitpnHynJc");
+bot.login(process.env.BOT_KEYFORROBLOX);
 //Ответы на загадки. время,имя,дверь,зонт,небо.
 //end.
