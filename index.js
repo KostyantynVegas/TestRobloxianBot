@@ -98,7 +98,7 @@ bot.on('message', message => {
 
 //answered.
        if (answered == false) {
-       AuthorMessage = msg;
+       AuthorMessage = message.author;
        if (AuthorMessage == Answers) {
        message.reply('Ты выиграл! :grinning:');
        }
