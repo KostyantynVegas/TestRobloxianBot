@@ -12,7 +12,7 @@ bot.on('message', message => {
 //credits command.
 bot.on('message', message => {
    if (message.content =="!credits") {
-       message.reply("Programmed on J.S. by Roenko Kostyantyn.");
+       message.reply("Programmed on JavaScript by Roenko Kostyantyn.");
    }
 });
 //random message.
@@ -98,9 +98,9 @@ bot.on('message', message => {
 
 //answered.
        if (answered == false) {
-       AuthorMessage = message;
+       AuthorMessage = author.message;
        if (AuthorMessage == Answers) {
-       message.reply('Ты выиграл! :anguished:');
+       message.reply('Ты выиграл! :grinning:');
        }
        else {
        message.reply('Ты проиграл! :anguished:');
