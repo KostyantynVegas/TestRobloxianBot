@@ -94,14 +94,14 @@ bot.on('message', message => {
    var numbers = 5;
 //answered.
        if (answered == false) {
-       AuthorMessage = message.author;
-       if (AuthorMessage == Answers) {
+       UserMessage = message;
+       if (UserMessage == Answers) {
        message.reply('Ты выиграл! :grinning:');
        }
        else {
        message.reply('Ты проиграл! :anguished:');
        }
-       answered = true; Answers=''; AuthorMessage='';
+       answered = true; Answers=''; UserMessage='';
     }
 
    var randomizer = Math.floor(Math.random() * (numbers -1 +1)) +1;
@@ -122,7 +122,7 @@ bot.login(process.env.BOT_KEYFORROBLOX);
 bot.on('ready', ()=> {
     console.log("botworks!");
     bot.user.setGame("#help");
-    AuthorMessage = "";
+    UserMessage = "";
     answered = true;
     Answers = "";
 });
