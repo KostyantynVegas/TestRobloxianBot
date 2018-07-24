@@ -2,11 +2,6 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
 
-bot.on('ready', ()=> {
-    console.log("botworks!");
-    bot.user.setGame("#help");
-});
-
 //start code.
 //help commands.
 bot.on('message', message => {
@@ -97,9 +92,8 @@ bot.on('message', message => {
    var p4 = "Себя он раскрывает, тебя он закрывает,Только дождичек пройдет — сделает наоборот. Ответ писать через '!' "; Answers = "!зонт";
    var p5 = "Синие покрывало-весь мир покрыла. Ответ писать через '!' "; Answers = "!небо";
    var numbers = 5;
-   var AuthorMessage = "";
-   var answered = true;
    var Answers = "";
+
 
 //answered.
        if (answered == false) {
@@ -127,5 +121,13 @@ bot.on('message', message => {
    });
 bot.login("NDcwMjU2MTc5NzgwNjQ4OTcx.DjYCwg.S-zss2_7QtOhxkWeXiitpnHynJc");
 bot.login(process.env.BOT_KEYFORROBLOX);
+
+bot.on('ready', ()=> {
+    console.log("botworks!");
+    bot.user.setGame("#help");
+    var AuthorMessage = "";
+    var answered = true;
+    var Answers = "";
+});
 //Ответы на загадки. время,имя,дверь,зонт,небо.
 //end.
