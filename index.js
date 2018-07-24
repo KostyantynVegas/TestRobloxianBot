@@ -92,9 +92,6 @@ bot.on('message', message => {
    var p4 = "Себя он раскрывает, тебя он закрывает,Только дождичек пройдет — сделает наоборот. Ответ писать через '!' "; Answers = "!зонт";
    var p5 = "Синие покрывало-весь мир покрыла. Ответ писать через '!' "; Answers = "!небо";
    var numbers = 5;
-   var Answers = "";
-
-
 //answered.
        if (answered == false) {
        AuthorMessage = message;
@@ -125,9 +122,9 @@ bot.login(process.env.BOT_KEYFORROBLOX);
 bot.on('ready', ()=> {
     console.log("botworks!");
     bot.user.setGame("#help");
-    var AuthorMessage = "";
-    var answered = true;
-    var Answers = "";
+    AuthorMessage = "";
+    answered = true;
+    Answers = "";
 });
 //Ответы на загадки. время,имя,дверь,зонт,небо.
 //end.
