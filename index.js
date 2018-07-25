@@ -43,25 +43,25 @@ var randomizer = Math.floor(Math.random() * (numbers -1 +1)) +1;
 bot.on("message", message => {
    var avatar = message.author.avatarURL;
   if (message.content =="!my avatar") {
-      message.reply("Your avatar is, " + avatar);
+      message.reply("```Your avatar is, ```" + avatar);
   }
 });
 //Random meme image.
 bot.on("message", message => {
 //variables.
-var img1="https://www.lifewire.com/thmb/M1ISdSdfLsU36nAuILe3YlFcY1w=/400x400/filters:fill(auto,1)/success-56a9fd1f3df78cf772abee09.jpg";
-var img2="https://nashuproar.org/wp-content/uploads/2017/09/what-is-a-meme.jpg";
-var img3="https://afinde-production.s3.amazonaws.com/uploads/21b1fc21-4c0a-4c1c-be20-09b58dad8fb4.jpg";
-var img4="https://orig00.deviantart.net/b00d/f/2016/118/9/b/triggered_by_yaycocoa-da0m18r.png";
-var img5="https://i.kym-cdn.com/photos/images/newsfeed/000/170/791/welcome-to-the-internet-internet-demotivational-poster-1264714433.png.jpg";
-var img6="https://i0.wp.com/ramenswag.com/wp-content/uploads/2016/09/14442632_1263969750313763_451636988_n-300x274.jpg?resize=300%2C274";
-var img7="https://i.imgflip.com/29lhcg.jpg";
-var img8="https://memepedia.ru/wp-content/uploads/2016/08/chanti-binks-mem.jpg";
-var img9="https://pics.me.me/me-condoms-please-cashier-31659952.png";
-var img10="http://www.dictionary.com/e/wp-content/uploads/2018/03/dank-meme.jpg";
-var img11="https://i.pinimg.com/originals/85/42/d7/8542d70d068a416047f37f46822ffcb8.jpg";
-var img12="http://cdn.ebaumsworld.com/thumbs/2017/11/05/044731/85508229/memes2.jpg";
-var img13="https://2static4.fjcdn.com/thumbnails/comments/Well+congratulations+you+have+introduced+the+latest+jojo+meme+since+_6aa0bf2d1a5d70204eab70659aedec65.jpg";
+var img1="```https://www.lifewire.com/thmb/M1ISdSdfLsU36nAuILe3YlFcY1w=/400x400/filters:fill(auto,1)/success-56a9fd1f3df78cf772abee09.jpg```";
+var img2="```https://nashuproar.org/wp-content/uploads/2017/09/what-is-a-meme.jpg```";
+var img3="```https://afinde-production.s3.amazonaws.com/uploads/21b1fc21-4c0a-4c1c-be20-09b58dad8fb4.jpg```";
+var img4="```https://orig00.deviantart.net/b00d/f/2016/118/9/b/triggered_by_yaycocoa-da0m18r.png```";
+var img5="```https://i.kym-cdn.com/photos/images/newsfeed/000/170/791/welcome-to-the-internet-internet-demotivational-poster-1264714433.png.jpg```";
+var img6="```https://i0.wp.com/ramenswag.com/wp-content/uploads/2016/09/14442632_1263969750313763_451636988_n-300x274.jpg?resize=300%2C274```";
+var img7="```https://i.imgflip.com/29lhcg.jpg```";
+var img8="```https://memepedia.ru/wp-content/uploads/2016/08/chanti-binks-mem.jpg```";
+var img9="```https://pics.me.me/me-condoms-please-cashier-31659952.png```";
+var img10="```http://www.dictionary.com/e/wp-content/uploads/2018/03/dank-meme.jpg```";
+var img11="```https://i.pinimg.com/originals/85/42/d7/8542d70d068a416047f37f46822ffcb8.jpg```";
+var img12="```http://cdn.ebaumsworld.com/thumbs/2017/11/05/044731/85508229/memes2.jpg```";
+var img13="```https://2static4.fjcdn.com/thumbnails/comments/Well+congratulations+you+have+introduced+the+latest+jojo+meme+since+_6aa0bf2d1a5d70204eab70659aedec65.jpg```";
     if(message.content == "!meme") {
 var number = 13;
 var random = Math.floor(Math.random() * (number - 1 +1)) +1;
@@ -86,20 +86,20 @@ var random = Math.floor(Math.random() * (number - 1 +1)) +1;
 //random puzzle.
 //variables.
 bot.on('message', message => {
-   var p1 = "Без ног и без крыльев оно,Быстро летит, не догонишь его. Ответ писать через '!' "; Answers = "!время";
-   var p2 = "Тебе дано,А люди им пользуются. Ответ писать через '!' "; Answers ="!имя";
-   var p3 = "Одной ручкой всех встречает,Другой ручкой провожает. Ответ писать через '!' "; Answers = "!дверь";
-   var p4 = "Себя он раскрывает, тебя он закрывает,Только дождичек пройдет — сделает наоборот. Ответ писать через '!' "; Answers = "!зонт";
-   var p5 = "Синие покрывало-весь мир покрыла. Ответ писать через '!' "; Answers = "!небо";
+   var p1 = "```The question for user ```"; Answers = "!время";
+   var p2 = "```Тебе дано,А люди им пользуются. Ответ писать через '!' ```"; Answers ="!имя";
+   var p3 = "```Одной ручкой всех встречает,Другой ручкой провожает. Ответ писать через '!' ```"; Answers = "!дверь";
+   var p4 = "```Себя он раскрывает, тебя он закрывает,Только дождичек пройдет — сделает наоборот. Ответ писать через '!' ```"; Answers = "!зонт";
+   var p5 = "```Синие покрывало-весь мир покрыла. Ответ писать через '!' ```"; Answers = "!небо";
    var numbers = 5;
 //answered.
        if (answered == false) {
        UserMessage = message;
        if (UserMessage == Answers) {
-       message.reply('Ты выиграл! :grinning:');
+       message.reply('```Ты выиграл! :grinning: ```');
        }
        else {
-       message.reply('Ты проиграл! :anguished:');
+       message.reply('```you are lost! :anguished: ```');
        }
        answered = true; Answers=''; UserMessage='';
     }
@@ -126,5 +126,5 @@ bot.on('ready', ()=> {
     answered = true;
     Answers = "";
 });
-//Ответы на загадки. время,имя,дверь,зонт,небо.
+//Ответы на загадки. время,имя,дверь,зонт,небо. Без ног и без крыльев оно,Быстро летит, не догонишь его. Ответ писать через '!'
 //end.
