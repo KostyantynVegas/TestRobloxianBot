@@ -5,29 +5,29 @@ const bot = new Discord.Client();
 //start code.
 //help commands.
 bot.on('message', message => {
-    if (message.content =="#help") {
-        message.reply("```Commands:!credits, !message, !puzzle, !my avatar, !meme.```");
+    if (message.content == "#help") {
+        message.reply("```Commands: #anime, #credits, #message, #puzzle, #my avatar, #meme.```");
     }
 });
 //credits command.
 bot.on('message', message => {
-   if (message.content =="!credits") {
-       message.reply("```Programmed on JavaScript by Roenko Kostyantyn.```");
+   if (message.content == "#credits") {
+       message.reply("Programmed on JavaScript by Roenko Kostyantyn. :tools: ");
    }
 });
 //random message.
 //variables.
 bot.on('message', message => {
-var joke1 = "```Однажды я гулял по лесу, вижу колодец. Подхожу к нему, захожу в лифт, сажусь на велосипед, завожу мотоцикл, тут бац, ко мне кондуктор подходит и говорит: ''Дядя, уступи место''. А я говорю что не курю. Так этот ребенок как начнет плакать! Но я не растерялся, и как дал ему по роже, а он хватается за коленку и кричит: ''Моя спина! Моя спина!''. Выхожу я из этой электрички, смотрю, маршрутка стоит. Ну подхожу и говорю: ''Винстон синий и водки 0,5''. Ну она мне и дает Bond и пиво. Я беру эту приму и самогон, и убегаю от этих мусоров! Так эти пожарники меня на скорой догнали! Догнали и говорят: ''Вы сдачу забыли!''. Ну я беру килограмм яблок, и иду на базар торговать. Приношу, не успел выложить эти бананы, тут же бабка подбегает и скупает у меня все персики, и говорит чтобы все сложил в кулечек! А я думаю, что она совсем больная, как я ей 20 арбузов в сумку положу?! Взял я деньги и пошел домой! Больше я в лес не ходил... и грибы не трогал... даже курить бросил.```";
-var joke2 = "```Что посеешь, то и пожнёшь.```";
-var joke3 = "```Привет...```";
-var joke4 = "```что??```";
-var joke5 = "```message.```";
-var joke6 = "```Го играть?```";
-var joke7 = "```Удачного дня!```";
+var joke1 = "Однажды я гулял по лесу, вижу колодец. Подхожу к нему, захожу в лифт, сажусь на велосипед, завожу мотоцикл, тут бац, ко мне кондуктор подходит и говорит: ''Дядя, уступи место''. А я говорю что не курю. Так этот ребенок как начнет плакать! Но я не растерялся, и как дал ему по роже, а он хватается за коленку и кричит: ''Моя спина! Моя спина!''. Выхожу я из этой электрички, смотрю, маршрутка стоит. Ну подхожу и говорю: ''Винстон синий и водки 0,5''. Ну она мне и дает Bond и пиво. Я беру эту приму и самогон, и убегаю от этих мусоров! Так эти пожарники меня на скорой догнали! Догнали и говорят: ''Вы сдачу забыли!''. Ну я беру килограмм яблок, и иду на базар торговать. Приношу, не успел выложить эти бананы, тут же бабка подбегает и скупает у меня все персики, и говорит чтобы все сложил в кулечек! А я думаю, что она совсем больная, как я ей 20 арбузов в сумку положу?! Взял я деньги и пошел домой! Больше я в лес не ходил... и грибы не трогал... даже курить бросил.";
+var joke2 = "Что посеешь, то и пожнёшь.";
+var joke3 = "Привет...";
+var joke4 = "что??";
+var joke5 = "message.";
+var joke6 = "Го играть?";
+var joke7 = "Удачного дня!";
 var numbers = 7;
 var randomizer = Math.floor(Math.random() * (numbers -1 +1)) +1;
-   if (message.content =="!message") {
+   if (message.content == "#message") {
    switch (randomizer) {
     case 1: message.reply([joke1]); break;
     case 2: message.reply([joke2]); break;
@@ -42,10 +42,11 @@ var randomizer = Math.floor(Math.random() * (numbers -1 +1)) +1;
 //Author image avatar.
 bot.on("message", message => {
    var avatar = message.author.avatarURL;
-  if (message.content =="!my avatar") {
+  if (message.content == "#my avatar") {
       message.reply("```Your avatar is, ```" + avatar);
   }
 });
+
 //Random meme image.
 bot.on("message", message => {
 //variables.
@@ -62,7 +63,7 @@ var img10="```http://www.dictionary.com/e/wp-content/uploads/2018/03/dank-meme.j
 var img11="```https://i.pinimg.com/originals/85/42/d7/8542d70d068a416047f37f46822ffcb8.jpg```";
 var img12="```http://cdn.ebaumsworld.com/thumbs/2017/11/05/044731/85508229/memes2.jpg```";
 var img13="```https://2static4.fjcdn.com/thumbnails/comments/Well+congratulations+you+have+introduced+the+latest+jojo+meme+since+_6aa0bf2d1a5d70204eab70659aedec65.jpg```";
-    if(message.content == "!meme") {
+    if(message.content == "#meme") {
 var number = 13;
 var random = Math.floor(Math.random() * (number - 1 +1)) +1;
     switch (random) {
@@ -82,43 +83,17 @@ var random = Math.floor(Math.random() * (number - 1 +1)) +1;
     }
 }
 });
-
+//dont works.
 //random puzzle.
-//variables.
 bot.on('message', message => {
-   var p1 = "```The question for user ```"; Answers = "!время";
-   var p2 = "```Тебе дано,А люди им пользуются. Ответ писать через '!' ```"; Answers ="!имя";
-   var p3 = "```Одной ручкой всех встречает,Другой ручкой провожает. Ответ писать через '!' ```"; Answers = "!дверь";
-   var p4 = "```Себя он раскрывает, тебя он закрывает,Только дождичек пройдет — сделает наоборот. Ответ писать через '!' ```"; Answers = "!зонт";
-   var p5 = "```Синие покрывало-весь мир покрыла. Ответ писать через '!' ```"; Answers = "!небо";
-   var numbers = 5;
-//answered.
-       if (answered == false) {
-       UserMessage = message;
-       if (UserMessage == Answers) {
-       message.reply('```Ты выиграл! :grinning: ```');
-       }
-       else {
-       message.reply('```you are lost! :anguished: ```');
-       }
-       answered = true; Answers=''; UserMessage='';
+    var p1 = "Простите, на этот момент эта комманда не работает. :anguished: ";
+    if (message.content == "#puzzle") {
+        message.reply(p1);
     }
+});
 
-   var randomizer = Math.floor(Math.random() * (numbers -1 +1)) +1;
-       if (message.content =="!puzzle") {
-       switch (randomizer) {
-        case 1: message.reply([p1]); break;
-        case 2: message.reply([p2]); break;
-        case 3: message.reply([p3]); break;
-        case 4: message.reply([p4]); break;
-        case 5: message.reply([p5]); break;
-       }   
-    answered = false;
-   }
-   });
 bot.login("NDcwMjU2MTc5NzgwNjQ4OTcx.DjYCwg.S-zss2_7QtOhxkWeXiitpnHynJc");
 bot.login(process.env.BOT_KEYFORROBLOX);
-
 bot.on('ready', ()=> {
     console.log("botworks!");
     bot.user.setGame("#help");
@@ -126,5 +101,5 @@ bot.on('ready', ()=> {
     answered = true;
     Answers = "";
 });
-//Ответы на загадки. время,имя,дверь,зонт,небо. Без ног и без крыльев оно,Быстро летит, не догонишь его. Ответ писать через '!'
+//Ответы на загадки. время,имя,дверь,зонт,небо.
 //end.
